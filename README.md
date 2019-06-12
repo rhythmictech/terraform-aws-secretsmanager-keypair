@@ -1,0 +1,1 @@
+# terraform-secretsmanager-keypair
