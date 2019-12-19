@@ -15,8 +15,7 @@ resource "aws_secretsmanager_secret" "secret_key" {
   description = var.description
 
   tags = merge(
-    local.common_tags,
-    var.additional_tags,
+    var.tags,
     map(
       "Name", "${var.name_prefix}-key"
     )
