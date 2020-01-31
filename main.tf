@@ -13,7 +13,6 @@ resource "aws_key_pair" "keypair" {
 resource "aws_secretsmanager_secret" "secret_key" {
   name_prefix = var.name_prefix
   description = var.description
-
   tags = merge(
     var.tags,
     map(
