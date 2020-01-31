@@ -1,14 +1,16 @@
-
-variable "tags" {
-  type = map(string)
-  default = {}
+variable "description" {
+  default     = "ssh key"
+  description = "Description of secret"
+  type        = string
 }
 
 variable "name_prefix" {
-  type = string
+  description = "Prefix to add to keypair/secret name"
+  type        = string
 }
 
-variable "description" {
-  type = string
-  default = "ssh key"
+variable "tags" {
+  default     = {}
+  description = "Tags to add to supported resources"
+  type        = map(string)
 }
